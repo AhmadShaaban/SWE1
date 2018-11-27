@@ -1,5 +1,4 @@
-The input format is array of characters 
-so, the input will always something like that : 1 2 3 , a b c 
+
 
 Team #8 Info: 
 [20160015 Zero if less than zero

@@ -3,17 +3,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Please Enter size of arr");
-        int sz;
-        Scanner in = new Scanner(System.in);
-        sz = in.nextInt();
-        char arr [] = new char[sz];
-        System.out.println("Enter array elements");
-        for (int i = 0 ; i<sz; ++i){
-            char c = in.next().charAt(0);
-            arr[i] = c;
+        System.out.println("Please Enter your choice");
 
-        }
         System.out.println("1  - most repeated value");
         System.out.println("2  - sort");
         System.out.println("3  - shuffle");
@@ -33,60 +24,68 @@ public class Main {
         System.out.println("17 - Zero if less than zero");
         System.out.println("18 - Execute all functions");
         System.out.println("Enter your choice");
+        Scanner in = new Scanner(System.in);
         int choice = in.nextInt();
+
+
+
+
         if (choice == 1){
 
+            //take array of integers
         }
         else if (choice == 2){
-
+            //take array of integers
         }
         else if (choice == 3){
-
+            //take array of integers
         }
         else if (choice == 4){
+            //take array of integers
 
         }
         else if (choice == 5){
+            //take array of integers
 
         }
         else if (choice == 6){
-
+            //take string
         }
         else if (choice == 7){
-
+            //take array of integers
         }
         else if (choice == 8){
-
+            //take array of integers
         }
         else if (choice == 9){
-
+            //take array of integers
         }
         else if (choice == 10){
-
+            //take string
         }
         else if (choice == 11){
-
+            //take array of integers
         }
         else if (choice == 12){
-
+            //take array of integers
         }
         else if (choice == 13){
-
+            //take array of integers
         }
         else if (choice == 14){
-
+            //take array of integers
         }
         else if (choice == 15){
-
+            //take array of integers
         }
         else if (choice == 16){
-
+            //take array of integers
         }
         else if (choice == 17){
-
+            //take array of integers
         }
         else if (choice == 18){
-
+            //take array of integers
         }
 
 
