@@ -64,7 +64,7 @@ public class Main {
             //take string
         }
         else if (choice == 11){
-            //take array of integers
+           distictarray();
         }
         else if (choice == 12){
             //take array of integers
@@ -94,4 +94,18 @@ public class Main {
 
 
     }
+	public static void distictarray() {
+	System.out.println("Please Enter size of array");
+	int sz;
+	Scanner in = new Scanner(System.in);
+	sz = in.nextInt();
+	Integer[] array = new Integer[sz];
+	System.out.println("please Enter array elements");
+	for (int i = 0; i < sz; ++i) {
+		array[i]=in.nextInt();
+	}
+	Set<Integer> Distinctarray = new TreeSet<Integer>();
+	Distinctarray.addAll(Arrays.asList(array));
+	System.out.println("Distinct elements are: " + Distinctarray);
+}
 }
