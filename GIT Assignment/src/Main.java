@@ -51,6 +51,12 @@ public class Main {
         }
         else if (choice == 6){
             //take string
+            System.out.println("Enter String to check Palindrome: ");
+            String data = in.next();
+            if(palindrome(data))
+                System.out.println("Palindrome: True");
+            else
+                System.out.println("Palindrome: False");
         }
         else if (choice == 7){
             //take array of integers
