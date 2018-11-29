@@ -134,4 +134,31 @@ public class Main {
         System.out.println();
 
     }
+    public static boolean palindrome(String data)
+    {
+        int size = data.length();
+        for(int i=0;i<size/2;i++)
+            if(data.charAt(i) != data.charAt(size-1-i))
+                return false;
+        return true;
+    }
+    public static boolean IntPalindrome()
+    {
+        int size = 0;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter Array Size: ");
+        size = in.nextInt();
+        int [] data = new int[size];
+        int val ;
+        System.out.println("Enter elements:");
+        for(int i=0;i<size;i++)
+        {
+            val = in.nextInt();
+            data[i]=val;
+        }
+        for(int i=0;i<size/2;i++)
+            if(data[i] != data[size-1-i])
+                return false;
+        return true;
+    }
 }
