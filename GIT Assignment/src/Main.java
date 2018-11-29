@@ -95,6 +95,10 @@ public class Main {
             //take array of integers
             distictarray();
             ZeroIfLessThanZero();
+            if(IntPalindrome())
+                System.out.println("Palindrome: True");
+            else
+                System.out.println("Palindrome: false");
         }
 
 
