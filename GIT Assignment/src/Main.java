@@ -74,7 +74,7 @@ public class Main {
             //take array of integers
         }
         else if (choice == 14){
-            //take array of integers
+            getAverage();
         }
         else if (choice == 15){
             //take array of integers
@@ -97,6 +97,22 @@ public class Main {
 
 
     }
+	public static void getAverage() {
+        System.out.println("Get average of array Function");
+	    System.out.print("Please Enter size of array: ");
+	    int sz;
+	    Scanner in = new Scanner(System.in);
+	    sz = in.nextInt();
+	    Integer[] array = new Integer[sz];
+	    System.out.print("please Enter array elements: ");
+        int result = 0;
+	    for (int i = 0; i < sz; ++i) {
+		    result += in.nextInt();
+	    }
+
+	    System.out.println("The average is: " + result);
+    }
+
 	public static void distictarray() {
         System.out.println("Distinct Array Function");
 	    System.out.println("Please Enter size of array");
