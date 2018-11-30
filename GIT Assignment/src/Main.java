@@ -128,7 +128,7 @@ public class Main {
 		    result += in.nextInt();
 	    }
 
-	    System.out.println("The average is: " + result/sz);
+	    System.out.println("The average is: " + (float)result/sz);
     }
 
     public static void ZeroIfLessThanZero(){
