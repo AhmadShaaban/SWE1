@@ -134,4 +134,27 @@ public class Main {
         System.out.println();
 
     }
+     public static int countPrime(int [] x)
+    {
+        int cp=0;
+        int s = x.length;
+        int i=0;
+        while(i<s)
+        {
+            int c=0;
+            for(int j=2; j<=9; j++)
+            {
+                if(x[i]%j==0 && x[i]!=j)
+                {
+                    c++;
+                    break;
+                }
+
+            }
+            if(c==0)
+            {cp++;} i++;
+        
+        }
+        return cp;
+}
 }
