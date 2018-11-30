@@ -56,7 +56,7 @@ public class Main {
             //take array of integers
         }
         else if (choice == 8){
-            //take array of integers
+            countPrime();
         }
         else if (choice == 9){
             //take array of integers
@@ -134,17 +134,27 @@ public class Main {
         System.out.println();
 
     }
-     public static int countPrime(int [] x)
+    public static void countPrime()
     {
+        System.out.println("Count primes");
+        System.out.println("Please Enter size of array");
+        int sz;
+        Scanner in = new Scanner(System.in);
+        sz = in.nextInt();
+        Integer [] arr = new Integer[sz];
+        System.out.println("Please Enter your array");
+        for (int i = 0 ; i < sz ; ++i){
+            arr[i] = in.nextInt();
+        }
         int cp=0;
-        int s = x.length;
+        
         int i=0;
-        while(i<s)
+        while(i<sz)
         {
             int c=0;
             for(int j=2; j<=9; j++)
             {
-                if(x[i]%j==0 && x[i]!=j)
+                if(arr[i]%j==0 && arr[i]!=j)
                 {
                     c++;
                     break;
@@ -155,6 +165,8 @@ public class Main {
             {cp++;} i++;
         
         }
-        return cp;
+        
+        System.out.print("the number of them is : "+ cp );
+        
 }
 }
