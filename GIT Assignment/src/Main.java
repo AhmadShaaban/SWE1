@@ -134,4 +134,20 @@ public class Main {
         System.out.println();
 
     }
+     public static void shiftarray(String arr,int n){
+    n=arr.length();
+    int i;
+    arr="";
+    String str1 = "";
+    Scanner input=new Scanner(System.in);
+    System.out.println("enter array you want to shifted");
+    arr=input.nextLine();
+    for(i=1;i<arr.length();i++){
+        str1=str1 + arr.charAt(i);
+                                    }
+        str1=str1+arr.charAt(0);
+         System.out.println(str1);
+
+
+    }
 }
