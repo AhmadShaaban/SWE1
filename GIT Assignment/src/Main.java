@@ -134,4 +134,25 @@ public class Main {
         System.out.println();
 
     }
+	
+
+	public static int returnPrime(int[] arrayOfIntegers){
+		int primeCount = 0;
+		boolean isPrime = true;
+		for(int i=0;i<arrayOfIntegers.length;i++){
+			for(int j=2;j<=arrayOfIntegers[i]/2;j++){
+				if(arrayOfIntegers[i] % j == 0){
+					isPrime = false;
+					break;
+				}
+				else{
+					isPrime = true;
+				}
+			}
+			if(isPrime){
+				primeCount++;
+			}
+		}
+		return primeCount;
+	}
 }
