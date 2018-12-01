@@ -109,7 +109,6 @@ public class Main {
             distictarray();
             getAverage();
             ZeroIfLessThanZero();
-            // engyayman20160068
             shuffle_Array();
 
 
