@@ -51,18 +51,26 @@ public class Main {
         }
         else if (choice == 6){
             //take string
+            System.out.println("Enter String to check Palindrome: ");
+            String data = in.next();
+            if(palindrome(data))
+                System.out.println("Palindrome: True");
+            else
+                System.out.println("Palindrome: False");
         }
         else if (choice == 7){
             //take array of integers
         }
         else if (choice == 8){
-            //take array of integers
+            countPrime();
         }
         else if (choice == 9){
             //take array of integers
         }
         else if (choice == 10){
             //take string
+            
+
         }
         else if (choice == 11){
            distictarray();
@@ -74,7 +82,7 @@ public class Main {
             //take array of integers
         }
         else if (choice == 14){
-            //take array of integers
+            getAverage();
         }
         else if (choice == 15){
             //take array of integers
@@ -88,8 +96,19 @@ public class Main {
         else if (choice == 18){
             //take array of integers
             distictarray();
+            getAverage();
             ZeroIfLessThanZero();
+            engyayman20160068
             shuffle_Array();
+
+
+            shiftarray();
+
+            if(IntPalindrome())
+                System.out.println("Palindrome: True");
+            else
+                System.out.println("Palindrome: false");
+
         }
 
 
@@ -98,6 +117,7 @@ public class Main {
 
 
     }
+
 	public static void distictarray() {
         System.out.println("Distinct Array Function");
 	    System.out.println("Please Enter size of array");
@@ -114,7 +134,21 @@ public class Main {
 	    System.out.println("Distinct elements are: " + Distinctarray);
     }
 
+    public static void getAverage() {
+        System.out.println("Get average of array Function");
+	    System.out.print("Please Enter size of array: ");
+	    int sz;
+	    Scanner in = new Scanner(System.in);
+	    sz = in.nextInt();
+	    Integer[] array = new Integer[sz];
+	    System.out.print("please Enter array elements: ");
+        int result = 0;
+	    for (int i = 0; i < sz; ++i) {
+		    result += in.nextInt();
+	    }
 
+	    System.out.println("The average is: " + (float)result/sz);
+    }
 
     public static void ZeroIfLessThanZero(){
         System.out.println("Zero If Less Than Zero Function");
@@ -135,6 +169,7 @@ public class Main {
         System.out.println();
 
     }
+
 
     static void shuffle_Array()
     {
@@ -162,4 +197,89 @@ public class Main {
           System.out.print(arr[i] + " ");
        }
   }
+
+      public static void shiftarray(){
+      String arr;
+      arr="";
+      int n;
+      n=arr.length();
+      int i;
+      String str1 = "";
+      Scanner input=new Scanner(System.in);
+      System.out.println("enter array you want to shifted");
+      arr=input.nextLine();
+      for(i=1;i<arr.length();i++){
+        str1=str1 + arr.charAt(i);
+                                    }
+        str1=str1+arr.charAt(0);
+         System.out.println(str1);
+
+
+    }
+
+
+    public static void countPrime()
+    {
+        System.out.println("Count primes");
+        System.out.println("Please Enter size of array");
+        int sz;
+        Scanner in = new Scanner(System.in);
+        sz = in.nextInt();
+        Integer [] arr = new Integer[sz];
+        System.out.println("Please Enter your array");
+        for (int i = 0 ; i < sz ; ++i){
+            arr[i] = in.nextInt();
+        }
+        int cp=0;
+        
+        int i=0;
+        while(i<sz)
+        {
+            int c=0;
+            for(int j=2; j<=9; j++)
+            {
+                if(arr[i]%j==0 && arr[i]!=j)
+                {
+                    c++;
+                    break;
+                }
+
+            }
+            if(c==0)
+            {cp++;} i++;
+        
+        }
+        
+        System.out.print("the number of them is : "+ cp );
+        
+}
+    public static boolean palindrome(String data)
+    {
+        int size = data.length();
+        for(int i=0;i<size/2;i++)
+            if(data.charAt(i) != data.charAt(size-1-i))
+                return false;
+        return true;
+    }
+    public static boolean IntPalindrome()
+    {
+        int size = 0;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter Array Size: ");
+        size = in.nextInt();
+        int [] data = new int[size];
+        int val ;
+        System.out.println("Enter elements:");
+        for(int i=0;i<size;i++)
+        {
+            val = in.nextInt();
+            data[i]=val;
+        }
+        for(int i=0;i<size/2;i++)
+            if(data[i] != data[size-1-i])
+                return false;
+        return true;
+    }
+
+
 }
