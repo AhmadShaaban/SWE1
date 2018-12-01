@@ -53,7 +53,7 @@ public class Main {
             shuffle_Array();
         }
         else if (choice == 4){
-            //take array of integers
+           System.out.println(get_max_prime());
 
         }
         else if (choice == 5){
@@ -357,6 +357,30 @@ public static void returnPrime(){
             }
         return true;
     }
+public static boolean isPrime(int m)
+	{
+        if(m<=1)
+	return false ;
+        for (int j = 2 ; j< m ; j++)
+	if (m% j == 0) return false ;
+        return true ;
+        }
+public static int get_max_prime(){
+        int max_prime=-1;
+        int v_len;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the array size : ");
+        v_len=input.nextInt();
+        for(int i=0;i<v_len;i++)
+        {
+            int x=input.nextInt();
+            if(isPrime(x)&&x>max_prime){
+            max_prime=x;
+            }
+           
+        }
+        return max_prime;
+        }
 
 
 
