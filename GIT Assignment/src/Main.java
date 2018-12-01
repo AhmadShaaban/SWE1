@@ -70,7 +70,7 @@ public class Main {
                 System.out.println("Palindrome: False");
         }
         else if (choice == 7){
-            //take array of integers
+        	System.out.println(Check_Sorted());
         }
         else if (choice == 8){
             countPrime();
@@ -118,6 +118,8 @@ public class Main {
                 System.out.println("Palindrome: True");
             else
                 System.out.println("Palindrome: false");
+            
+            System.out.println(Check_Sorted());
 
         }
 
@@ -331,6 +333,22 @@ public class Main {
         for(int i=0;i<size/2;i++)
             if(data[i] != data[size-1-i])
                 return false;
+        return true;
+    }
+    private static boolean Check_Sorted() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("FN Check Sorted");
+        int size;
+        System.out.println("Enter the size of Array");
+        size = in.nextInt();
+        int arr[] = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = in.nextInt();
+        }
+        for (int counter1 = 0; counter1 < (size - 1); counter1++)
+            if (arr[counter1] > arr[counter1 + 1]) {
+                return false;
+            }
         return true;
     }
 
