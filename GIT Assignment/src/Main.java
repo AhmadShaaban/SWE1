@@ -116,7 +116,7 @@ public class Main {
                 System.out.println("Palindrome: True");
             else
                 System.out.println("Palindrome: false");
-//master
+master
         }
 
     }
@@ -279,5 +279,5 @@ public class Main {
         return true;
     }
 
-//master
+master
 }
