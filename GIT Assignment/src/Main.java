@@ -200,6 +200,30 @@ public class Main {
     }
 
 
+	
+
+	public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
+		ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
+		boolean isPrime = true;
+		for(int i=0;i<arrayOfIntegers.length;i++){
+			for(int j=2;j<=arrayOfIntegers[i]/2;j++){
+				if(arrayOfIntegers[i] % j == 0){
+					isPrime = false;
+					break;
+				}
+				else{
+					isPrime = true;
+				}
+			}
+			if(isPrime){
+				primeNumbers.add(arrayOfIntegers[i]);
+			}
+		}
+		return primeNumbers;
+	}
+
+
+
     static void shuffle_Array()
     {
        System.out.println("Please Enter size of array");
@@ -226,6 +250,7 @@ public class Main {
           System.out.print(arr[i] + " ");
        }
   }
+
 
       public static void shiftarray(){
       String arr;
@@ -309,6 +334,7 @@ public class Main {
                 return false;
         return true;
     }
+
 
 
 }
