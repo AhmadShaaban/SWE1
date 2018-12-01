@@ -100,6 +100,7 @@ public class Main {
         }
         else if (choice == 16){
             //take array of integers
+	    returnPrime();
         }
         else if (choice == 17){
             ZeroIfLessThanZero();
@@ -110,7 +111,7 @@ public class Main {
             getAverage();
             ZeroIfLessThanZero();
             shuffle_Array();
-
+	    returnPrime();
 
             shiftarray();
 
@@ -200,30 +201,35 @@ public class Main {
 
     }
 
-
-	
-
-	public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
-		ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
+public static ArrayList<Integer> returnPrime(){
+	ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
+	Scanner input = new Scanner(System.in);
+	System.out.print("Enter the size of the array: ");
+	int size = input.nextInt();
+	int[] arrayOfIntegers = new int[size];
+	System.out.println("Enter the elements of the array: ");
+	for(int i=0;i<size;i++){
+		arrayOfIntegers[i] = input.nextInt();
 		boolean isPrime = true;
-		for(int i=0;i<arrayOfIntegers.length;i++){
-			for(int j=2;j<=arrayOfIntegers[i]/2;j++){
-				if(arrayOfIntegers[i] % j == 0){
-					isPrime = false;
-					break;
-				}
-				else{
-					isPrime = true;
-				}
+		for(int j=2;j<=arrayOfIntegers[i]/2;j++){
+			if(arrayOfIntegers[i] % j == 0){
+				isPrime = false;
+				break;
 			}
-			if(isPrime){
-				primeNumbers.add(arrayOfIntegers[i]);
+			else{
+				isPrime = true;
 			}
 		}
-		return primeNumbers;
+		if(arrayOfIntegers[i]==0 || arrayOfIntegers[i]==1){
+			isPrime = false;
+		}
+		if(isPrime){
+			primeNumbers.add(arrayOfIntegers[i]);
+		}
 	}
-
-
+	input.close();
+	return primeNumbers;
+}
 
     static void shuffle_Array()
     {
