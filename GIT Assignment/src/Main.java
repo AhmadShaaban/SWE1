@@ -136,8 +136,8 @@ public class Main {
     }
 	
 
-	public static int returnPrime(int[] arrayOfIntegers){
-		int primeCount = 0;
+	public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
+		ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
 		boolean isPrime = true;
 		for(int i=0;i<arrayOfIntegers.length;i++){
 			for(int j=2;j<=arrayOfIntegers[i]/2;j++){
@@ -150,9 +150,9 @@ public class Main {
 				}
 			}
 			if(isPrime){
-				primeCount++;
+				primeNumbers.add(arrayOfIntegers[i]);
 			}
 		}
-		return primeCount;
+		return primeNumbers;
 	}
 }
