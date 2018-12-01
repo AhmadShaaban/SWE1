@@ -201,7 +201,7 @@ public class Main {
 
     }
 
-public static ArrayList<Integer> returnPrime(){
+public static void returnPrime(){
 	ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
 	Scanner input = new Scanner(System.in);
 	System.out.print("Enter the size of the array: ");
@@ -228,7 +228,7 @@ public static ArrayList<Integer> returnPrime(){
 		}
 	}
 	input.close();
-	return primeNumbers;
+	System.out.println(primeNumbers);
 }
 
     static void shuffle_Array()
