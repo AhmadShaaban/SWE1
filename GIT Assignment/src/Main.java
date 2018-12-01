@@ -34,6 +34,17 @@ public class Main {
         if (choice == 1){
 
             //take array of integers
+            int sizeOfArray;
+            System.out.println("Please enter the size of the Array: \n");
+            Scanner x = new Scanner(System.in);
+            sizeOfArray = x.nextInt();
+            int [] Arr= new int[sizeOfArray];
+            System.out.println("Enter the "+sizeOfArray+" value in the Array:");
+            for(int i=0;i<sizeOfArray;i++) {
+                Scanner content = new Scanner(System.in);
+                Arr[i] = content.nextInt();
+            }
+            System.out.println("The Most repeated value in the array is:"+ mostRepeatedVal(Arr));
         }
         else if (choice == 2){
             //take array of integers
@@ -105,13 +116,31 @@ public class Main {
                 System.out.println("Palindrome: True");
             else
                 System.out.println("Palindrome: false");
-master
+//master
         }
 
+    }
 
-
-
-
+    public static int mostRepeatedVal(int array[]){
+        int[][] tempArr=new int[array.length][2];
+        int tempmax=0,index=0;//the index of most repeated value
+        for(int i=0;i<array.length;i++){
+            tempArr[i][0]=0;//initializing the 2nd table for counting the content of the 1st table
+            tempArr[i][1]=array[i];//coping the content of the array in the TempArr;
+        }
+        for(int i=0;i<array.length;i++){
+            for(int j=0;j<array.length;j++){
+                if(tempArr[i][1]==array[j])++tempArr[i][0];
+            }
+            System.out.println(tempArr[i][0]);
+        }
+        for(int i=0;i<array.length;i++){
+            if(tempmax<=tempArr[i][0]) {
+                tempmax = tempArr[i][0];
+                index = i;
+            }
+        }
+        return tempArr[index][1];
 
     }
 
@@ -250,5 +279,5 @@ master
         return true;
     }
 
-master
+//master
 }
