@@ -199,30 +199,28 @@ public class Main {
 
     }
 
-
-	
-
-	public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
-		ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
+public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
+	ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
+	for(int i=0;i<arrayOfIntegers.length;i++){
 		boolean isPrime = true;
-		for(int i=0;i<arrayOfIntegers.length;i++){
-			for(int j=2;j<=arrayOfIntegers[i]/2;j++){
-				if(arrayOfIntegers[i] % j == 0){
-					isPrime = false;
-					break;
-				}
-				else{
-					isPrime = true;
-				}
+		for(int j=2;j<=arrayOfIntegers[i]/2;j++){
+			if(arrayOfIntegers[i] % j == 0){
+				isPrime = false;
+				break;
 			}
-			if(isPrime){
-				primeNumbers.add(arrayOfIntegers[i]);
+			else{
+				isPrime = true;
 			}
 		}
-		return primeNumbers;
+		if(arrayOfIntegers[i]==0 || arrayOfIntegers[i]==1){
+			isPrime = false;
+		}
+		if(isPrime){
+			primeNumbers.add(arrayOfIntegers[i]);
+		}
 	}
-
-
+	return primeNumbers;
+}
 
     static void shuffle_Array()
     {
