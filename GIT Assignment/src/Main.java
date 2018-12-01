@@ -63,6 +63,11 @@ public class Main {
         }
         else if (choice == 10){
             //take string
+            System.out.println("enter array you want to shifted");
+            String arr=in.nextLine();
+            int n=arr.length();
+            shiftarray(arr,n);
+
         }
         else if (choice == 11){
            distictarray();
@@ -89,7 +94,10 @@ public class Main {
             //take array of integers
             distictarray();
             ZeroIfLessThanZero();
-            
+            String arr=in.nextLine();
+            int n=arr.length();
+            shiftarray(arr,n);
+
         }
 
 
