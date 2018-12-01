@@ -100,6 +100,7 @@ public class Main {
         }
         else if (choice == 16){
             //take array of integers
+	    returnPrime();
         }
         else if (choice == 17){
             ZeroIfLessThanZero();
@@ -109,9 +110,8 @@ public class Main {
             distictarray();
             getAverage();
             ZeroIfLessThanZero();
-            engyayman20160068
             shuffle_Array();
-
+	    returnPrime();
 
             shiftarray();
 
@@ -199,9 +199,15 @@ public class Main {
 
     }
 
-public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
+public static ArrayList<Integer> returnPrime(){
 	ArrayList<Integer> primeNumbers = new ArrayList<Integer>();
-	for(int i=0;i<arrayOfIntegers.length;i++){
+	Scanner input = new Scanner(System.in);
+	System.out.print("Enter the size of the array: ");
+	int size = input.nextInt();
+	int[] arrayOfIntegers = new int[size];
+	System.out.println("Enter the elements of the array: ");
+	for(int i=0;i<size;i++){
+		arrayOfIntegers[i] = input.nextInt();
 		boolean isPrime = true;
 		for(int j=2;j<=arrayOfIntegers[i]/2;j++){
 			if(arrayOfIntegers[i] % j == 0){
@@ -219,6 +225,7 @@ public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
 			primeNumbers.add(arrayOfIntegers[i]);
 		}
 	}
+	input.close();
 	return primeNumbers;
 }
 
