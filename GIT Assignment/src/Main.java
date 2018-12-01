@@ -80,7 +80,7 @@ public class Main {
         }
         else if (choice == 10){
             //take string
-            
+            shiftarray();
 
         }
         else if (choice == 11){
