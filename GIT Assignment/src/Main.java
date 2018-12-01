@@ -89,6 +89,7 @@ public class Main {
             //take array of integers
             distictarray();
             ZeroIfLessThanZero();
+            shuffle_Array();
         }
 
 
