@@ -50,7 +50,7 @@ public class Main {
             //take array of integers
         }
         else if (choice == 3){
-            //take array of integers
+            shuffle_Array();
         }
         else if (choice == 4){
             //take array of integers
@@ -109,6 +109,9 @@ public class Main {
             distictarray();
             getAverage();
             ZeroIfLessThanZero();
+            engyayman20160068
+            shuffle_Array();
+
 
             shiftarray();
 
@@ -116,7 +119,7 @@ public class Main {
                 System.out.println("Palindrome: True");
             else
                 System.out.println("Palindrome: false");
-master
+
         }
 
     }
@@ -196,6 +199,7 @@ master
 
     }
 
+
 	
 
 	public static ArrayList<Integer> returnPrime(int[] arrayOfIntegers){
@@ -217,6 +221,35 @@ master
 		}
 		return primeNumbers;
 	}
+
+
+
+    static void shuffle_Array()
+    {
+       System.out.println("Please Enter size of array");
+       int size;
+	   Scanner input = new Scanner(System.in);
+	   size = input.nextInt();
+	   Integer[] arr = new Integer[size];
+	   System.out.println("please Enter array elements");
+	   for (int i = 0; i < size; ++i)
+       {
+		  arr[i]=input.nextInt();
+	   }
+       Random ind = new Random();
+       for (int i = arr.length - 1; i > 0; i--)
+       {
+          int index = ind.nextInt(i + 1);
+          //  swap
+          int temp = arr[index];
+          arr[index] = arr[i];
+          arr[i] = temp;
+       }
+       for (int i = 0; i < arr.length; i++)
+       {
+          System.out.print(arr[i] + " ");
+       }
+  }
 
 
       public static void shiftarray(){
@@ -257,7 +290,7 @@ master
         while(i<sz)
         {
             int c=0;
-            for(int j=2; j<=9; j++)
+            for(int j=2; j<=arr[i]; j++)
             {
                 if(arr[i]%j==0 && arr[i]!=j)
                 {
