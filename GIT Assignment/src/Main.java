@@ -120,6 +120,7 @@ public class Main {
                 System.out.println("Palindrome: false");
             
             System.out.println(Check_Sorted());
+	    System.out.println(get_max_prime());
 
         }
 
