@@ -47,7 +47,14 @@ public class Main {
             System.out.println("The Most repeated value in the array is:"+ mostRepeatedVal(Arr));
         }
         else if (choice == 2){
-            //take array of integers
+
+            int []a1={0,99,56,82,10,-5,-2,11,21};
+            int []a2=sorting(a1);
+            System.out.println(sorting(a1));
+            for(int i :a2){
+                System.out.println(i);
+
+            }
         }
         else if (choice == 3){
             shuffle_Array();
@@ -356,6 +363,18 @@ public static void returnPrime(){
                 return false;
             }
         return true;
+    }
+    public static int[] sorting(int arr[]) {
+        for (int i=0;i<arr.length-1;i++) {
+            int index=i;
+            for (int j=i+1;j<arr.length; j++)
+                if (arr[j]<arr[index])
+                    index=j;
+            int smallerNumber=arr[index];
+            arr[index]=arr[i];
+            arr[i]=smallerNumber;
+        }
+        return arr;
     }
 
 
