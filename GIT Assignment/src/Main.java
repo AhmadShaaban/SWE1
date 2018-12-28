@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.*;
+import the.minimum.pkg3.numbers.TheMinimum3Numbers;
 
 public class Main {
 
@@ -98,6 +99,7 @@ public class Main {
         }
         else if (choice == 13){
             //take array of integers
+            getminimum3numbers();
         }
         else if (choice == 14){
             getAverage();
@@ -237,7 +239,36 @@ public static void returnPrime(){
 	input.close();
 	System.out.println(primeNumbers);
 }
+public static void getminimum3numbers() {
+        ArrayList arr = new ArrayList();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter count Of The Numbers");
+        int x = in.nextInt();
+        //int i=0;
+        System.out.println("Enter Your Numbers");
+        for (int j = 0; j < x; j++) {
+            int s = in.nextInt();
+            arr.add(s);
+        }
 
+        Collections.sort(arr);
+
+        for (int j = 0; j < 4; j++) {
+            if (arr.get(j) == arr.get(j + 1)) {
+                System.out.print(arr.get(j + 1));
+                j++;
+
+            } else {
+                System.out.print(arr.get(j));
+
+            }
+            
+
+        }
+
+    }
+
+  
     static void shuffle_Array()
     {
        System.out.println("Please Enter size of array");
